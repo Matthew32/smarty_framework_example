@@ -1,4 +1,4 @@
-<?
+<?php
 // CONFIG: Smarty Location
 require("Smarty-lib/libs/Smarty.class.php");
 date_default_timezone_set('America/Los_Angeles');
@@ -11,7 +11,7 @@ $smarty = new Smarty();
 $smarty->setTemplateDir(MY_PHP_ROOT."/smarty/templates");
 //Create this directory if this does not exist
 $smarty->setCompileDir(MY_PHP_ROOT."/smarty/templates_c");
-//Create this directory if this does not exist
+//Create this directory if this does not in
 $smarty->setCacheDir(MY_PHP_ROOT."/smarty/cache");
 //http://www.smarty.net/docs/en/config.files.tpl
 $smarty->setConfigDir(MY_PHP_ROOT."/smarty/configs");
@@ -29,7 +29,7 @@ $params["baseurl"] = "./";
 switch($action)
 {
 	case "":
-        // Load production data        
+        // Load production data
         require("banners.json.php");
         $banners = json_decode($banners_json, TRUE);
         $params["banners"] = processData($banners);
@@ -45,7 +45,7 @@ switch($action)
         if($num_of_slashes > 0){
             for ($i =0; $i < $num_of_slashes; $i++){
                 $params["baseurl"] .="../";
-            }    
+            }
         }
 
         break;
@@ -61,7 +61,7 @@ foreach($params as $key => $value)
 }
 
 $smarty->display($template);
- 
+
 //Utility Functions
 function safeGetString($name, $default=NULL)
 {

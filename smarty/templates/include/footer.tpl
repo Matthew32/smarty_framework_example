@@ -2,7 +2,7 @@
 {assign var="baseurl" value=""}
 {/if}
         <footer>
-          <h2>Footer</h2>
+          <h2>THE FOOTER</h2>
         </footer>
         <script type="text/javascript" src="{$baseurl}js/jquery.js"></script>
         <script type="text/javascript" src="{$baseurl}js/bootstrap.js"></script>
